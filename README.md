@@ -30,6 +30,7 @@ See `.agents/rules/130-human-made-ui.md` and `.agents/checklists/ui-quality.md`.
 | --- | --- |
 | Operating contract | `.agents/rules/00-operating-contract.md` |
 | Repository/requirements | `.agents/rules/10-requirements-and-repository-discovery.md` |
+| Stack/version detection | `.agents/rules/15-stack-and-version-detection.md` |
 | Architecture/components | `.agents/rules/20-architecture-and-components.md` |
 | Frontend/backend contract | `.agents/rules/25-frontend-contract-discovery.md` |
 | API/data fetching | `.agents/rules/30-api-data-fetching.md` |
@@ -43,6 +44,7 @@ See `.agents/rules/130-human-made-ui.md` and `.agents/checklists/ui-quality.md`.
 | Test data | `.agents/rules/110-test-data-and-fixtures.md` |
 | Accessibility | `.agents/rules/120-accessibility.md` |
 | Human-made UI | `.agents/rules/130-human-made-ui.md` |
+| Visual references | `.agents/rules/135-visual-reference-analysis.md` |
 | Design system | `.agents/rules/140-design-system.md` |
 | Responsive | `.agents/rules/150-responsive.md` |
 | Routing | `.agents/rules/160-navigation-and-routing.md` |
