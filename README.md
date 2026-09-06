@@ -16,13 +16,15 @@ The rulebook is stack-agnostic. It adapts to the repository's actual framework, 
 
 Whenever a feature requires OAuth credentials, AI API keys, analytics IDs, maps keys, payment configuration, backend URLs, storage configuration, or any other external configuration, the agent MUST inspect the repository's conventions and tell the developer the exact file/path, variable or config key, environment, client/server exposure, source of the value, and verification steps. It must never invent a path or ask the developer to paste secrets into source code or chat.
 
-See `.agents/rules/195-secrets-and-integration-configuration.md` and `.agents/templates/integration-configuration-report.md`.
+See `.agents/rules/195-secrets-and-integration-configuration.md`, `.agents/rules/290-configuration-audit.md`, and `.agents/templates/integration-configuration-report.md`.
 
 ## Human-made UI principle
 
-The agent must not produce generic AI-looking interfaces merely because they are easy to generate. It must derive the visual language from the product, existing design system, content, domain, and supplied references. Avoid arbitrary gradients, excessive rounded cards, decorative blobs, gratuitous glassmorphism, meaningless animations, fake metrics, generic copy, and template-like layouts unless the product actually calls for them.
+The agent must not produce generic AI-looking interfaces merely because they are easy to generate. It must derive the visual language from the product, existing design system, content, domain, and supplied references. For substantial visual work, it should research multiple relevant sources such as Awwwards, Brandfetch, Godly/Recent, SiteInspire, CSS Design Awards, Mobbin, Page Flows, Behance, Dribbble, Land-book, Lapa Ninja, One Page Love, and The FWA, then extract principles rather than clone a site.
 
-See `.agents/rules/130-human-made-ui.md` and `.agents/checklists/ui-quality.md`.
+Avoid arbitrary gradients, excessive rounded cards, decorative blobs, gratuitous glassmorphism, meaningless animations, fake metrics, generic copy, and template-like layouts unless the product actually calls for them.
+
+See `.agents/rules/130-human-made-ui.md`, `.agents/rules/135-visual-inspiration-and-reference-analysis.md`, `.agents/rules/300-design-reference-research.md`, and `.agents/checklists/design-research.md`.
 
 ## Rule index
 
@@ -44,7 +46,7 @@ See `.agents/rules/130-human-made-ui.md` and `.agents/checklists/ui-quality.md`.
 | Test data | `.agents/rules/110-test-data-and-fixtures.md` |
 | Accessibility | `.agents/rules/120-accessibility.md` |
 | Human-made UI | `.agents/rules/130-human-made-ui.md` |
-| Visual references | `.agents/rules/135-visual-reference-analysis.md` |
+| Visual inspiration | `.agents/rules/135-visual-inspiration-and-reference-analysis.md` |
 | Design system | `.agents/rules/140-design-system.md` |
 | Responsive | `.agents/rules/150-responsive.md` |
 | Routing | `.agents/rules/160-navigation-and-routing.md` |
@@ -61,12 +63,13 @@ See `.agents/rules/130-human-made-ui.md` and `.agents/checklists/ui-quality.md`.
 | Files/media | `.agents/rules/270-files-and-media.md` |
 | Realtime | `.agents/rules/280-realtime-and-background-ui.md` |
 | Configuration audit | `.agents/rules/290-configuration-audit.md` |
+| Design research workflow | `.agents/rules/300-design-reference-research.md` |
 
 ## Workflows, checklists, and templates
 
-Use `.agents/workflows/feature-implementation.md` for substantial frontend features and `.agents/workflows/frontend-backend-integration.md` for full-stack flows.
+Use `.agents/workflows/feature-implementation.md` for substantial frontend features, `.agents/workflows/frontend-backend-integration.md` for full-stack flows, and `.agents/workflows/design-research-and-implementation.md` for material visual work.
 
-Use `.agents/checklists/definition-of-done.md`, `.agents/checklists/accessibility.md`, `.agents/checklists/ui-quality.md`, and `.agents/checklists/testing.md` during review.
+Use `.agents/checklists/definition-of-done.md`, `.agents/checklists/accessibility.md`, `.agents/checklists/ui-quality.md`, `.agents/checklists/design-research.md`, and `.agents/checklists/testing.md` during review.
 
 Use `.agents/templates/frontend-backend-contract.md` and `.agents/templates/integration-configuration-report.md` for repeatable evidence/configuration handoffs.
 
@@ -83,7 +86,7 @@ Existing patterns do not justify preserving a known correctness, security, acces
 
 ## Research basis
 
-The rulebook was informed by several public frontend/AI-agent rule collections, including `romanveselovski/agents-frontend-rules`, `h4ckney/frontend-agent-playbook`, `yanhongwang1017/frontend-ai-coding-rules`, and `fribble186/fullstack-cursor-rules`. Their useful patterns were adapted into a verification-first, stack-agnostic system rather than copied as a generic rules dump. See `docs/research-and-influences.md`.
+The rulebook was informed by several public frontend/AI-agent rule collections, including `romanveselovski/agents-frontend-rules`, `h4ckney/frontend-agent-playbook`, `yanhongwang1017/frontend-ai-coding-rules`, and `fribble186/fullstack-cursor-rules`, plus current web-design inspiration sources such as Awwwards and Brandfetch. Their useful patterns were adapted into a verification-first, stack-agnostic system rather than copied as a generic rules dump. See `docs/research-and-influences.md` and `docs/design-inspiration-sources.md`.
 
 ## Status
 
